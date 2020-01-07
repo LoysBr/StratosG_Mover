@@ -15,11 +15,25 @@ public abstract class MoveBehavior : MonoBehaviour
     private MoveState _CurrentState;
     public MoveState CurrentState { get { return _CurrentState; } }
 
-    void Start()
+    [SerializeField]
+    protected Collider Target;
+    [SerializeField]
+    protected float Speed;
+
+    protected Rigidbody RigidBody;
+
+    protected void Start()
     {
+        RigidBody = GetComponent<Rigidbody>();
         _CurrentState = MoveState.Setup;
+        OnEnterState(_CurrentState);
     }
-    
+
+    protected void Update()
+    {
+        ExecuteState(_CurrentState);
+    }
+
     abstract protected void OnEnterState(MoveState _state);
     abstract protected void OnLeaveState(MoveState _state);
     abstract protected void ExecuteState(MoveState _state);
@@ -36,5 +50,13 @@ public abstract class MoveBehavior : MonoBehaviour
     {
         yield return new WaitForSeconds(_time);
         SwitchState(MoveState.Moving);
+    }
+
+    protected void OnTriggerEnter(Collider _trigger)
+    {
+        if(_trigger.gameObject == Target.gameObject)
+        {
+            SwitchState(MoveState.TargetReached);
+        }
     }
 }

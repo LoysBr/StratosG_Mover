@@ -744,21 +744,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2551761795794736693, guid: f0ac377605111d541aaa3091cd618e97,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 2551761795794736693, guid: f0ac377605111d541aaa3091cd618e97,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2551761795794736693, guid: f0ac377605111d541aaa3091cd618e97,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -6.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 2551761795794736693, guid: f0ac377605111d541aaa3091cd618e97,
-        type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
@@ -813,3 +798,17 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2551761794304242002}
   m_Enabled: 1
+--- !u!114 &2551761794304242004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2551761794304242002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e45a5f18be8b7bd408f868f5e1ebca3b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Target: {fileID: 1370044182}
+  Speed: 10
