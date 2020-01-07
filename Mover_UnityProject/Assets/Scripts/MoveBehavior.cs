@@ -16,7 +16,7 @@ public abstract class MoveBehavior : MonoBehaviour
     public MoveState CurrentState { get { return _CurrentState; } }
 
     [SerializeField]
-    protected Collider Target;
+    protected SphereCollider Target;
     [SerializeField]
     protected float Speed;
 
